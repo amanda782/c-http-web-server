@@ -60,6 +60,22 @@ def start_server():
                         "<p>Bem-vindo ao servidor Web implementado em Python com Sockets TCP!</p>"
                         "</body></html>"
                     )
+                elif route == "/sobre":
+                    response = (
+                        "HTTP/1.1 200 OK\r\n"
+                        "Content-Type: text/html; charset=utf-8\r\n\r\n"
+                        "<!DOCTYPE html><html><head><title>Sobre</title></head>"
+                        "<body><h1>Sobre o Servidor</h1>"
+                        "<h2>Socket</h2>"
+                        "<p>Socket é uma interface que permite a comunicação entre aplicações através de uma rede.</p>"
+                        "<h2>TCP</h2>"
+                        "<p>TCP é um protocolo da camada de transporte que estabelece uma conexão "
+                        "e garante a entrega ordenada dos dados.</p>"
+                        "<h2>HTTP</h2>"
+                        "<p>HTTP é um protocolo da camada de aplicação utilizado para a comunicação "
+                        "entre clientes e servidores Web.</p>"
+                        "</body></html>"
+                    )
                 else:
                     response = (
                         "HTTP/1.1 404 Not Found\r\n"
@@ -75,7 +91,3 @@ def start_server():
 
 if __name__ == "__main__":
     start_server()
-
-
-
-
